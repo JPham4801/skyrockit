@@ -11,10 +11,17 @@
     <div class="signin-container">
       <h1>Sign in</h1>
       <form action="/auth/sign-in" method="POST">
+        <p style="color: red; font-size: 14px">
+          ⚠️ This is a personal project. Usernames and passwords are stored in a MongoDB database. Do not use real
+          credentials.
+        </p>
+
         <label for="username">Username:</label>
         <input type="text" name="username" id="username" />
+
         <label for="password">Password:</label>
         <input type="password" name="password" id="password" />
+
         <button type="submit">Sign in</button>
       </form>
     </div>
