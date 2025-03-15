@@ -12,6 +12,10 @@
     <div class="signup-container">
       <h1>Create a new account!</h1>
       <form action="/auth/sign-up" method="POST">
+        <p class="credentials-warning">
+          ⚠️ This is my project showcasing proof of concept. Usernames and passwords are stored in my personal MongoDB
+          database. Do not use real credentials.
+        </p>
         <label for="username">Username:</label>
         <input type="text" name="username" id="username" />
         <label for="password">Password:</label>

@@ -29,7 +29,13 @@ if (!process.env.MONGODB_URI) {
 
 // Connect to MongoDB with error handling
 mongoose
-  .connect(process.env.MONGODB_URI)
+  .connect(
+    `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@student-cluster.qlz6gc2.mongodb.net/${process.env.MONGO_DATABASE}?retryWrites=true&w=majority&appName=student-cluster`,
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
   .then(() => console.log(`✅ Connected to MongoDB: ${mongoose.connection.name}`))
   .catch((err) => {
     console.error('❌ MongoDB connection error:', err);

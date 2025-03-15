@@ -207,3 +207,9 @@ select {
   align-items: center;
   height: 100%;
 }
+
+.credentials-warning {
+  color: red;
+  font-size: 14px;
+  margin: 10px 0;
+}
